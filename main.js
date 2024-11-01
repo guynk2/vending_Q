@@ -30,7 +30,7 @@ let course = [
     {
         courseID: "NGJ92M",
         courseAvatar:
-            "https://files.oaiusercontent.com/file-FObb5vxLZeYMVQTYE3Xne1Tw?se=2024-10-16T16%3A11%3A05Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D4d2c7821-7e6c-486e-b9fd-005830fd8b4d.webp&sig=avlSIhN%2ByGeQMibFMKW713PTMhHCXK97TcAG/EgLcQU%3D" ,
+            "https://lh4.googleusercontent.com/HG0Nr2Nr3fpfBLLt4HWLB1OJyMdUb5yWmPnssYYyuB7ZMRZOA9m-q8lycAJQBViFCuOFtaOascY_THd7H_8PJas=w1280" ,
         courseName: "Combo sát trùng vết thương (1 Povidine,1 băng gạt, 1 keo)",
         coursePrice:50000,
     },
