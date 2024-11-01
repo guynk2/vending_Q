@@ -1,0 +1,192 @@
+/* Reset and base styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; /* Base font size 10px for easier rem calculations */
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: auto; /* Allow height to grow dynamically */
+    overflow-y: scroll; /* Allow vertical scrolling */
+    font-size: 1.6rem;
+    padding: 2rem;
+    color: #333;
+}
+
+h1 {
+    color: #262a53;
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* Main layout */
+.course_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto; /* Allow wrapper height to grow */
+}
+
+.course_inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); /* Auto-adjust to fit screen */
+    gap: 2rem;
+    justify-items: center;
+    width: 100%;
+    max-width: 1000px; /* Limit maximum width */
+    margin-bottom: 4rem;
+}
+
+.course_item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 25rem; /* Maintain smaller width for items */
+    position: relative;
+}
+
+.course_item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.course_item p {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.course_item p:nth-child(3) {
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #e63946;
+}
+
+.course_item_btn {
+    color: #fff;
+    background-color: #262a53;
+    padding: 0.8rem 2.5rem;
+    display: inline-block;
+    margin-top: 1.5rem;
+    text-align: center;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effects */
+.course_item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.course_item:hover img {
+    transform: scale(1.05);
+}
+
+.course_item_btn:hover {
+    background-color: #e63946;
+}
+
+/* Payment section */
+.course_qr {
+    text-align: center;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: fit-content; /* Ensure it only takes space for its content */
+    max-width: 35rem;
+    margin: 0 auto 2rem; /* Center and space it on the page */
+    display: block; /* Ensure block layout */
+}
+
+.course_qr_img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+}
+
+.course_qr p {
+    font-size: 1.8rem;
+    color: #262a53;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+#paid_content {
+    color: #333;
+}
+
+#paid_price {
+    color: #e63946;
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .course_inner {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); /* Adjust for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    .course_item {
+        max-width: 100%;
+    }
+
+    .course_inner {
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); /* Adjust for smaller screens */
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .course_item {
+        padding: 1rem;
+        max-width: 100%;
+    }
+
+    .course_inner {
+        gap: 0.5rem;
+    }
+    
+    .course_qr {
+        padding: 1rem;
+        max-width: 100%;
+    }
+}
